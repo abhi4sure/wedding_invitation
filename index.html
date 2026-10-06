@@ -392,6 +392,61 @@ section{
   color:var(--maroon);
 }
 
+/* ---------- WELCOME ---------- */
+
+.welcome{
+  position:relative;
+  max-width:680px;
+  margin:0 auto;
+  padding:34px 34px 30px;
+  text-align:left;
+}
+.welcome .salutation{
+  margin:0 0 14px;
+  font-size:24px;
+  font-style:italic;
+  font-weight:500;
+  color:var(--maroon);
+}
+.welcome p{
+  margin:0 0 14px;
+  font-size:20px;
+  line-height:1.7;
+}
+.welcome .lead::first-letter{
+  float:left;
+  font-size:3.2em;
+  line-height:.9;
+  padding:4px 8px 0 0;
+  font-weight:600;
+  color:var(--gold);
+}
+.welcome .sign{
+  margin:22px 0 0;
+  text-align:center;
+  font-style:italic;
+  color:var(--ink-soft);
+}
+.welcome .sign span{
+  display:block;
+  font-family:var(--script);
+  font-style:normal;
+  font-size:44px;
+  line-height:1.1;
+  color:var(--ink);
+}
+
+footer .closing{
+  max-width:460px;
+  margin:0 auto 18px;
+  font-family:var(--serif);
+  font-size:20px;
+  font-style:italic;
+  letter-spacing:0;
+  text-transform:none;
+  color:var(--ink);
+}
+
 /* ---------- COUNTDOWN ---------- */
 
 .countdown{
@@ -737,6 +792,9 @@ footer p{
   td{font-size:16px}
   th{font-size:10px; letter-spacing:.12em}
   .card{padding:18px}
+  .welcome{padding:26px 20px 22px}
+  .welcome p{font-size:18px}
+  .welcome .salutation{font-size:21px}
   .highlight .art{width:96px; right:-34px; bottom:auto; top:-20px; opacity:.75}
   .nav{justify-content:flex-start}
   .nav ul{justify-content:flex-start}
@@ -775,6 +833,7 @@ footer p{
 
 <nav class="nav" aria-label="Sections">
   <ul>
+    <li><a href="#welcome">Welcome</a></li>
     <li><a href="#countdown">Countdown</a></li>
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#venue">Venue</a></li>
@@ -785,6 +844,38 @@ footer p{
 </nav>
 
 <main class="container">
+
+<!-- ============ WELCOME ============ -->
+<section id="welcome" class="reveal">
+  <div class="heading">
+    <span class="kicker">Padharo Mhare Des</span>
+    <h2>A Warm Welcome</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="card welcome">
+    <p class="salutation">Dear Family &amp; Friends,</p>
+    <p class="lead">
+      With hearts full of joy and gratitude, we invite you to be a part of the most
+      special chapter of our lives. Your love, blessings and laughter have shaped who
+      we are — and our celebration would simply be incomplete without you.
+    </p>
+    <p>
+      Come, join us in the colourful land of Rajasthan, as two hearts and two families
+      come together in Jalore this December — for rituals, music, good food and
+      memories to treasure forever.
+    </p>
+    <p>
+      We have gathered everything you need right here — the schedule, travel routes
+      and a few handy tips — so you can just pack your bags, arrive and celebrate with us.
+    </p>
+
+    <p class="sign">
+      With love and warm regards,
+      <span>Abhishek &amp; Kamini</span>
+    </p>
+  </div>
+</section>
 
 <!-- ============ COUNTDOWN ============ -->
 <section id="countdown" class="reveal">
@@ -991,6 +1082,7 @@ footer p{
 </main>
 
 <footer>
+  <p class="closing">Your presence is the most precious gift — we can't wait to celebrate with you!</p>
   <img src="assets/monogram.webp" alt="">
   <div class="script">Abhishek &amp; Kamini</div>
   <p>14 &amp; 15 December 2026 · Jalore, Rajasthan</p>
