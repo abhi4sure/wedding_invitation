@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek &amp; Kamini | Wedding Planner · Jalore, Dec 2026</title>
+<meta name="description" content="Save the date — Abhishek &amp; Kamini, 14th &amp; 15th December 2026, Jalore, Rajasthan. Schedule, venue and travel guide for guests.">
+<meta name="theme-color" content="#f8dccb">
+<meta property="og:title" content="Abhishek &amp; Kamini — Save the Date">
+<meta property="og:description" content="14th &amp; 15th December 2026 · Jalore, Rajasthan">
+<link rel="icon" href="assets/monogram.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --peach:#f9d8c6;
+  --blush:#f6e4d8;
+  --cream:#f4efe7;
+  --ink:#4a5651;
+  --ink-soft:#717b76;
+  --maroon:#7a2e21;
+  --gold:#b38a3c;
+  --gold-soft:#dcc48e;
+  --line:rgba(179,138,60,.32);
+  --card:rgba(255,253,250,.62);
+  --gold-band:linear-gradient(90deg,#b8913a,#f1d993 22%,#c29a48 45%,#f4df9f 70%,#b8913a);
+
+  --script:"Allura", cursive;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Montserrat", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:70px}
+
+body{
+  margin:0;
+  font-family:var(--serif);
+  font-size:19px;
+  color:var(--ink);
+  line-height:1.55;
+  font-variant-numeric:lining-nums;
+  background:
+    radial-gradient(1200px 700px at 0% 0%, rgba(249,206,186,.85), transparent 60%),
+    linear-gradient(115deg, var(--peach) 0%, var(--blush) 38%, var(--cream) 72%, #f1ede5 100%);
+  background-color:var(--cream);
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%; display:block}
+a{color:inherit}
+
+.gold-band{
+  height:14px;
+  position:relative;
+}
+.gold-band::before,
+.gold-band::after{
+  content:"";
+  position:absolute; left:0; right:0;
+  background:var(--gold-band);
+}
+.gold-band::before{top:3px; height:1.5px; opacity:.8}
+.gold-band::after{top:8px; height:4px}
+.gold-band.bottom::before{top:9px}
+.gold-band.bottom::after{top:2px}
+
+/* ---------- HERO (the invitation) ---------- */
+
+.hero{
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.invite{
+  container-type:inline-size;
+  position:relative;
+  width:100%;
+  max-width:660px;
+}
+
+.invite .art-arch{
+  position:absolute;
+  left:0;
+  bottom:var(--base);
+  width:48.4cqw;
+  pointer-events:none;
+  z-index:0;
+}
+
+.invite .art-right{
+  position:absolute;
+  right:0;
+  top:4cqw;
+  width:27cqw;
+  pointer-events:none;
+  z-index:0;
+}
+
+.invite{--base:max(64px,11cqw)}
+.invite-content{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding:17cqw 6cqw var(--base);
+}
+
+.monogram{
+  width:clamp(54px,11cqw,80px);
+  margin:0 auto 3cqw;
+}
+
+.save-date{
+  font-family:var(--script);
+  font-weight:400;
+  font-size:clamp(36px,8.6cqw,60px);
+  line-height:1;
+  margin:0 0 2.5cqw;
+  color:var(--ink);
+}
+
+.when,
+.where{
+  font-family:var(--serif);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin:0;
+  color:var(--ink-soft);
+}
+.when{
+  font-weight:700;
+  font-size:clamp(14px,2.9cqw,21px);
+}
+.when sup{font-size:.6em}
+.where{
+  font-weight:500;
+  font-size:clamp(13px,2.7cqw,19px);
+  margin-top:.2em;
+}
+
+.names{
+  font-family:var(--script);
+  font-weight:400;
+  font-size:clamp(38px,9.4cqw,66px);
+  line-height:.95;
+  margin:4cqw 0 3cqw;
+  color:var(--ink);
+}
+.names span{display:block}
+.names .n1{transform:translateX(-6cqw)}
+.names .n2{transform:translateX(9cqw)}
+
+.portrait{
+  position:relative;
+  width:clamp(160px,38cqw,270px);
+  aspect-ratio:5/6;
+  margin:0 auto;
+  border-radius:999px 999px 0 0;
+  overflow:hidden;
+  box-shadow:0 18px 40px -22px rgba(122,46,33,.55);
+}
+.portrait img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:50% 30%;
+}
+.portrait::after{
+  content:"";
+  position:absolute;
+  inset:8px 8px 0;
+  border:1px solid rgba(255,240,210,.85);
+  border-bottom:0;
+  border-radius:999px 999px 0 0;
+  pointer-events:none;
+}
+
+.base-line{
+  position:absolute;
+  z-index:2;
+  left:7.6cqw;
+  right:10cqw;
+  bottom:var(--base);
+  height:4px;
+  background:var(--maroon);
+  border-radius:2px;
+}
+
+.follow{
+  position:absolute;
+  z-index:2;
+  left:0; right:0;
+  bottom:calc(var(--base) - 3em);
+  margin:0;
+  text-align:center;
+  font-family:var(--sans);
+  font-size:clamp(10px,1.9cqw,13px);
+  letter-spacing:.22em;
+  color:var(--ink);
+}
+
+@media (min-width:700px){
+  .hero{padding:40px 20px 56px}
+  .invite{
+    overflow:hidden;
+    border-radius:4px;
+    background:linear-gradient(115deg,#fad9c7 0%,#f7e5d9 42%,#f3eee6 75%,#f0ece4 100%);
+    box-shadow:
+      0 0 0 1px rgba(179,138,60,.28),
+      0 40px 70px -40px rgba(122,46,33,.55);
+  }
+  .invite::before,
+  .invite::after{
+    content:"";
+    position:absolute;
+    z-index:3;
+    left:0; right:0;
+    height:12px;
+    background:
+      var(--gold-band) 0 2px / 100% 4px no-repeat,
+      var(--gold-band) 0 9px / 100% 1.5px no-repeat;
+  }
+  .invite::before{top:10px}
+  .invite::after{bottom:10px; transform:scaleY(-1)}
+}
+
+/* ---------- NAV ---------- */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(248,238,229,.82);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.nav ul{
+  list-style:none;
+  margin:0 auto;
+  padding:0 12px;
+  max-width:880px;
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  display:block;
+  padding:14px 14px;
+  font-family:var(--sans);
+  font-size:11.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color .2s, border-color .2s;
+}
+.nav a:hover,
+.nav a.active{
+  color:var(--maroon);
+  border-bottom-color:var(--gold);
+}
+
+/* ---------- LAYOUT ---------- */
+
+.container{
+  max-width:880px;
+  margin:0 auto;
+  padding:10px 20px 30px;
+}
+
+section{
+  padding:46px 0 10px;
+}
+
+.heading{
+  text-align:center;
+  margin-bottom:26px;
+}
+.heading .kicker{
+  display:block;
+  font-family:var(--script);
+  font-size:46px;
+  line-height:1;
+  color:var(--gold);
+}
+.heading h2{
+  margin:4px 0 0;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:24px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--maroon);
+}
+.ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:12px;
+}
+.ornament::before,
+.ornament::after{
+  content:"";
+  width:70px; height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+}
+.ornament::after{transform:scaleX(-1)}
+.ornament i{
+  width:7px; height:7px;
+  background:var(--gold);
+  transform:rotate(45deg);
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:20px 22px;
+  margin:12px 0;
+  box-shadow:0 10px 30px -24px rgba(122,46,33,.5);
+}
+
+.card h3{
+  margin:0 0 6px;
+  font-weight:600;
+  font-size:23px;
+  color:var(--ink);
+}
+
+.small{
+  color:var(--ink-soft);
+  font-size:16px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+  gap:12px;
+}
+.grid-2 .card{margin:0}
+
+.label{
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+
+.button-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+.button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--maroon);
+  color:#fff7ef;
+  padding:12px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border:1px solid var(--maroon);
+  cursor:pointer;
+  transition:transform .2s, box-shadow .2s, background .2s;
+}
+.button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 22px -12px rgba(122,46,33,.8);
+}
+.button.ghost{
+  background:transparent;
+  color:var(--maroon);
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  max-width:560px;
+  margin:0 auto;
+}
+.countdown div{
+  text-align:center;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px 6px 12px;
+}
+.countdown strong{
+  display:block;
+  font-size:40px;
+  font-weight:600;
+  line-height:1;
+  color:var(--maroon);
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.countdown span{
+  font-family:var(--sans);
+  font-size:10.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.countdown-note{
+  text-align:center;
+  margin-top:14px;
+  font-style:italic;
+  color:var(--ink-soft);
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline{
+  list-style:none;
+  margin:0;
+  padding:0 0 0 30px;
+  position:relative;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:9px; top:10px; bottom:10px;
+  width:2px;
+  background:linear-gradient(var(--gold-soft),var(--maroon));
+}
+.timeline li{
+  position:relative;
+  margin-bottom:12px;
+}
+.timeline li::before{
+  content:"";
+  position:absolute;
+  left:-27px; top:26px;
+  width:12px; height:12px;
+  border-radius:50%;
+  background:var(--cream);
+  border:2px solid var(--gold);
+}
+.timeline li.key::before{
+  background:var(--maroon);
+  border-color:var(--maroon);
+  box-shadow:0 0 0 4px rgba(122,46,33,.15);
+}
+.timeline .card{margin:0}
+.timeline .date-tag{
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.timeline h3{margin:2px 0 0}
+
+/* ---------- TABLES ---------- */
+
+.table-wrap{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  padding:13px 16px;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+}
+tr:last-child td{border-bottom:0}
+th{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--maroon);
+  background:rgba(249,216,198,.45);
+}
+
+/* ---------- ROUTES ---------- */
+
+.route{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+.route strong{
+  font-size:20px;
+  font-weight:600;
+}
+.badge{
+  background:rgba(179,138,60,.12);
+  color:var(--maroon);
+  border:1px solid var(--line);
+  padding:4px 12px;
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:12px;
+  white-space:nowrap;
+}
+
+/* ---------- HIGHLIGHT ---------- */
+
+.highlight{
+  position:relative;
+  border:1.5px solid var(--gold);
+  background:linear-gradient(135deg,rgba(255,248,236,.9),rgba(249,222,206,.7));
+  overflow:hidden;
+}
+.highlight .art{
+  position:absolute;
+  right:-30px;
+  bottom:-60px;
+  width:150px;
+  opacity:.9;
+  pointer-events:none;
+}
+.highlight > *:not(.art){position:relative; z-index:1}
+
+.train-times{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:14px 0 18px;
+  flex-wrap:wrap;
+}
+.train-times .stop strong{
+  display:block;
+  font-size:26px;
+  font-weight:600;
+  line-height:1.1;
+  color:var(--maroon);
+}
+.train-times .arrow{
+  flex:0 1 80px;
+  height:1px;
+  background:var(--gold);
+  position:relative;
+}
+.train-times .arrow::after{
+  content:"";
+  position:absolute;
+  right:0; top:-4px;
+  border-left:8px solid var(--gold);
+  border-top:4.5px solid transparent;
+  border-bottom:4.5px solid transparent;
+}
+
+.plan{
+  list-style:none;
+  margin:0;
+  padding:0;
+  max-width:420px;
+}
+.plan li{
+  display:flex;
+  gap:16px;
+  padding:7px 0;
+  border-bottom:1px dashed var(--line);
+}
+.plan li:last-child{border-bottom:0}
+.plan time{
+  min-width:86px;
+  font-weight:700;
+  color:var(--maroon);
+}
+
+/* ---------- CHECKLIST ---------- */
+
+.checklist{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.checklist label{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:10px 4px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;
+  user-select:none;
+}
+.checklist li:last-child label{border-bottom:0}
+.checklist input{
+  appearance:none;
+  -webkit-appearance:none;
+  flex:none;
+  width:22px; height:22px;
+  margin:0;
+  border:1.5px solid var(--gold);
+  border-radius:6px;
+  display:grid;
+  place-content:center;
+  background:#fffaf4;
+  cursor:pointer;
+  transition:background .2s;
+}
+.checklist input::before{
+  content:"";
+  width:11px; height:6px;
+  border-left:2px solid #fff;
+  border-bottom:2px solid #fff;
+  transform:rotate(-45deg) translate(1px,-1px) scale(0);
+  transition:transform .15s;
+}
+.checklist input:checked{background:var(--maroon); border-color:var(--maroon)}
+.checklist input:checked::before{transform:rotate(-45deg) translate(1px,-1px) scale(1)}
+.checklist input:checked + span{
+  color:var(--ink-soft);
+  text-decoration:line-through;
+  text-decoration-color:var(--gold);
+}
+.progress{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.progress .bar{
+  flex:1;
+  height:4px;
+  border-radius:4px;
+  background:rgba(179,138,60,.2);
+  overflow:hidden;
+}
+.progress .bar i{
+  display:block;
+  height:100%;
+  width:0;
+  background:var(--gold-band);
+  transition:width .35s ease;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+  text-align:center;
+  padding:40px 20px 26px;
+}
+footer img{
+  width:70px;
+  margin:0 auto 6px;
+}
+footer .script{
+  font-family:var(--script);
+  font-size:44px;
+  line-height:1.1;
+}
+footer p{
+  margin:4px 0;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+/* ---------- MOTION ---------- */
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.reveal.in{opacity:1; transform:none}
+
+@keyframes rise{
+  from{opacity:0; transform:translateY(14px)}
+  to{opacity:1; transform:none}
+}
+@keyframes sway{
+  from{opacity:0; transform:translateX(var(--from,0))}
+  to{opacity:1; transform:none}
+}
+.invite-content > *{animation:rise 1s ease both}
+.invite-content > :nth-child(2){animation-delay:.15s}
+.invite-content > :nth-child(3){animation-delay:.3s}
+.invite-content > :nth-child(4){animation-delay:.4s}
+.invite-content > :nth-child(5){animation-delay:.55s}
+.invite-content > :nth-child(6){animation-delay:.75s}
+.invite .art-arch{--from:-24px; animation:sway 1.4s ease both}
+.invite .art-right{--from:24px; animation:sway 1.4s .2s ease both}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important; transition:none !important}
+  .reveal{opacity:1; transform:none}
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:600px){
+  body{font-size:18px}
+  .names .n1{transform:translateX(2cqw)}
+  .names .n2{transform:translateX(10cqw)}
+  .invite .art-arch{left:-6cqw}
+  .invite .art-right{right:-7cqw}
+  .base-line{left:2cqw; right:6cqw}
+  .countdown{gap:8px}
+  .countdown strong{font-size:30px}
+  .countdown span{font-size:9px; letter-spacing:.12em}
+  .heading .kicker{font-size:40px}
+  .heading h2{font-size:20px}
+  th,td{padding:11px 12px}
+  td{font-size:16px}
+  th{font-size:10px; letter-spacing:.12em}
+  .card{padding:18px}
+  .highlight .art{width:96px; right:-34px; bottom:auto; top:-20px; opacity:.75}
+  .nav{justify-content:flex-start}
+  .nav ul{justify-content:flex-start}
+}
+</style>
+</head>
+
+<body>
+
+<div class="gold-band"></div>
+
+<!-- ============ SAVE THE DATE ============ -->
+<header class="hero">
+  <div class="invite">
+    <img class="art-arch" src="assets/floral-arch.webp" alt="" aria-hidden="true">
+    <img class="art-right" src="assets/floral-right.webp" alt="" aria-hidden="true">
+
+    <div class="invite-content">
+      <img class="monogram" src="assets/monogram.webp" alt="AK monogram">
+      <h1 class="save-date">Save the Date</h1>
+      <p class="when">14<sup>th</sup> &amp; 15<sup>th</sup> Dec, 2026</p>
+      <p class="where">Jalore, Rajasthan</p>
+      <p class="names" aria-label="Abhishek and Kamini">
+        <span class="n1">Abhishek &amp;</span>
+        <span class="n2">Kamini</span>
+      </p>
+      <div class="portrait">
+        <img src="Couple.jpeg" alt="Abhishek and Kamini">
+      </div>
+    </div>
+
+    <div class="base-line"></div>
+    <p class="follow">EVENT PLANNER &amp; TRAVEL GUIDE</p>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections">
+  <ul>
+    <li><a href="#countdown">Countdown</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#venue">Venue</a></li>
+    <li><a href="#travel">Travel</a></li>
+    <li><a href="#return">Return</a></li>
+    <li><a href="#checklist">Checklist</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+<!-- ============ COUNTDOWN ============ -->
+<section id="countdown" class="reveal">
+  <div class="heading">
+    <span class="kicker">Counting down</span>
+    <h2>To the Big Day</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="countdown" id="timer">
+    <div><strong data-unit="days">--</strong><span>Days</span></div>
+    <div><strong data-unit="hours">--</strong><span>Hours</span></div>
+    <div><strong data-unit="minutes">--</strong><span>Minutes</span></div>
+    <div><strong data-unit="seconds">--</strong><span>Seconds</span></div>
+  </div>
+  <p class="countdown-note" id="timer-note">until 14<sup>th</sup> December 2026</p>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section id="schedule" class="reveal">
+  <div class="heading">
+    <span class="kicker">The Celebrations</span>
+    <h2>Wedding Schedule</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <ol class="timeline">
+    <li>
+      <div class="card">
+        <span class="date-tag">12 – 13 December</span>
+        <h3>Guest Arrivals</h3>
+        <span class="small">Check in, settle down and soak in Jalore.</span>
+      </div>
+    </li>
+    <li class="key">
+      <div class="card">
+        <span class="date-tag">14 December</span>
+        <h3>The Wedding</h3>
+        <span class="small">The main celebration.</span>
+      </div>
+    </li>
+    <li>
+      <div class="card">
+        <span class="date-tag">15 December</span>
+        <h3>Final Functions &amp; Departures</h3>
+        <span class="small">Last rituals, farewells and journeys home.</span>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section id="venue" class="reveal">
+  <div class="heading">
+    <span class="kicker">Where</span>
+    <h2>Wedding Destination</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="card" style="text-align:center">
+    <div class="label">The Venue</div>
+    <h3>Jalore, Rajasthan</h3>
+    <span class="small">Use the link below for the exact wedding venue.</span>
+
+    <div class="button-row" style="justify-content:center">
+      <a class="button" href="https://maps.app.goo.gl/xcyM4Urt3scPCtUL6" target="_blank" rel="noopener">
+        Open Wedding Location
+      </a>
+      <a class="button ghost" id="gcal" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Abhishek%20%26%20Kamini%20%E2%80%94%20Wedding&amp;dates=20261214/20261216&amp;location=Jalore%2C%20Rajasthan&amp;details=Wedding%20celebrations%20of%20Abhishek%20%26%20Kamini%2C%2014th%20%26%2015th%20December%202026.%20Venue%3A%20https%3A%2F%2Fmaps.app.goo.gl%2FxcyM4Urt3scPCtUL6">
+        Add to Google Calendar
+      </a>
+      <button class="button ghost" id="ics" type="button">Apple / Outlook (.ics)</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRAVEL ============ -->
+<section id="travel" class="reveal">
+  <div class="heading">
+    <span class="kicker">Getting there</span>
+    <h2>Travel Guide</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="label">By Air</div>
+      <h3>Fly to Jodhpur (JDH)</h3>
+      Jodhpur Airport → Jalore<br>
+      <span class="small">Approx. 140 km · 2 – 2.5 hrs by road</span>
+    </div>
+    <div class="card">
+      <div class="label">By Rail</div>
+      <h3>Jalore Station (JOR)</h3>
+      Direct from Mumbai on Train 12489<br>
+      <span class="small">Delhi &amp; other cities: direct / connecting services</span>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0; overflow:hidden; margin-top:12px">
+    <table>
+      <tr>
+        <th>From</th>
+        <th>Train</th>
+        <th>Destination</th>
+      </tr>
+      <tr>
+        <td>Mumbai</td>
+        <td><strong>12489</strong><br><span class="small">Bikaner–Dadar SF Express</span></td>
+        <td>Jalore (JOR)</td>
+      </tr>
+      <tr>
+        <td>Delhi / Other Cities</td>
+        <td><span class="small">Check direct / connecting services</span></td>
+        <td>Jalore (JOR)</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3 style="margin:30px 0 4px; text-align:center; font-weight:600">By Road / Bus</h3>
+  <div class="grid-2">
+    <div class="card"><div class="route"><strong>Ahmedabad → Jalore</strong><span class="badge">~7–9 hrs</span></div></div>
+    <div class="card"><div class="route"><strong>Jaipur → Jalore</strong><span class="badge">~8 hrs</span></div></div>
+    <div class="card"><div class="route"><strong>Delhi NCR → Jalore</strong><span class="badge">~13–14 hrs</span></div></div>
+    <div class="card"><div class="route"><strong>Mumbai → Jalore</strong><span class="badge">~18–19 hrs</span></div></div>
+  </div>
+
+  <h3 style="margin:30px 0 4px; text-align:center; font-weight:600">City-wise Recommendation</h3>
+  <div class="card" style="padding:0; overflow:hidden">
+    <table>
+      <tr><th>City</th><th>Recommended</th></tr>
+      <tr><td>Mumbai</td><td>Train / Flight</td></tr>
+      <tr><td>Delhi NCR</td><td>Flight / Train</td></tr>
+      <tr><td>Ahmedabad</td><td>Bus / Train</td></tr>
+      <tr><td>Jaipur</td><td>Bus / Train</td></tr>
+      <tr><td>Pune</td><td>Flight / Train</td></tr>
+      <tr><td>Bengaluru</td><td>Flight</td></tr>
+      <tr><td>Hyderabad</td><td>Flight</td></tr>
+      <tr><td>Chennai</td><td>Flight</td></tr>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <div class="label">Local Transfers</div>
+    Airport pickup: <strong>Jodhpur → Jalore</strong><br>
+    Railway pickup: <strong>Jalore Station → Venue</strong><br>
+    Group transport: <strong>Tempo Traveller / Mini Bus / SUV</strong>
+  </div>
+</section>
+
+<!-- ============ RETURN ============ -->
+<section id="return" class="reveal">
+  <div class="heading">
+    <span class="kicker">Heading home</span>
+    <h2>Mumbai Return — 15 Dec</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="card highlight">
+    <img class="art" src="assets/floral-right.webp" alt="" aria-hidden="true">
+
+    <div class="label">Train 12489</div>
+    <h3>Bikaner → Dadar Western SF Express</h3>
+
+    <div class="train-times">
+      <div class="stop"><span class="small">Jalore (JOR)</span><strong>~10:01 PM</strong><span class="small">15 Dec</span></div>
+      <div class="arrow"></div>
+      <div class="stop"><span class="small">Dadar (DDR)</span><strong>~12:50 PM</strong><span class="small">16 Dec</span></div>
+    </div>
+
+    <div class="label">Guest Plan</div>
+    <ul class="plan">
+      <li><time>8:15 PM</time> Luggage ready</li>
+      <li><time>8:45 PM</time> Leave venue</li>
+      <li><time>9:15 PM</time> Reach Jalore Station</li>
+      <li><time>10:01 PM</time> Train departure</li>
+    </ul>
+  </div>
+
+  <p class="small" style="text-align:center">Please re-check the final railway timetable before booking.</p>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section id="checklist" class="reveal">
+  <div class="heading">
+    <span class="kicker">Before you go</span>
+    <h2>Quick Checklist</h2>
+    <div class="ornament"><i></i></div>
+  </div>
+
+  <div class="card">
+    <div class="progress"><span id="progress-text">0 of 5 done</span><div class="bar"><i id="progress-bar"></i></div></div>
+    <ul class="checklist" id="checklist-items">
+      <li><label><input type="checkbox" data-key="book"><span>Book travel early</span></label></li>
+      <li><label><input type="checkbox" data-key="arrive"><span>Plan arrival by 13 Dec</span></label></li>
+      <li><label><input type="checkbox" data-key="location"><span>Save the wedding location</span></label></li>
+      <li><label><input type="checkbox" data-key="return"><span>Keep return tickets ready</span></label></li>
+      <li><label><input type="checkbox" data-key="mumbai"><span>Mumbai guests: plan for Train 12489 on 15 Dec</span></label></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="assets/monogram.webp" alt="">
+  <div class="script">Abhishek &amp; Kamini</div>
+  <p>14 &amp; 15 December 2026 · Jalore, Rajasthan</p>
+  <p style="margin-top:14px">Invitation to follow</p>
+</footer>
+
+<div class="gold-band bottom"></div>
+
+<script>
+(function(){
+  // Countdown
+  var target = new Date("2026-12-14T00:00:00+05:30").getTime();
+  var cells = {};
+  document.querySelectorAll("#timer [data-unit]").forEach(function(el){ cells[el.dataset.unit] = el; });
+  function pad(n){ return String(n).padStart(2,"0"); }
+  function tick(){
+    var diff = target - Date.now();
+    if (diff <= 0){
+      document.getElementById("timer").style.display = "none";
+      document.getElementById("timer-note").textContent = "The celebrations have begun!";
+      return;
+    }
+    var s = Math.floor(diff/1000);
+    cells.days.textContent = Math.floor(s/86400);
+    cells.hours.textContent = pad(Math.floor(s%86400/3600));
+    cells.minutes.textContent = pad(Math.floor(s%3600/60));
+    cells.seconds.textContent = pad(s%60);
+    setTimeout(tick, 1000 - Date.now()%1000);
+  }
+  tick();
+
+  // .ics download
+  document.getElementById("ics").addEventListener("click", function(){
+    var ics = [
+      "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//AK Wedding//EN",
+      "BEGIN:VEVENT",
+      "UID:ak-wedding-20261214@abhishek-kamini",
+      "DTSTAMP:20261001T000000Z",
+      "DTSTART;VALUE=DATE:20261214",
+      "DTEND;VALUE=DATE:20261216",
+      "SUMMARY:Abhishek & Kamini — Wedding",
+      "LOCATION:Jalore\\, Rajasthan",
+      "DESCRIPTION:Venue: https://maps.app.goo.gl/xcyM4Urt3scPCtUL6",
+      "END:VEVENT","END:VCALENDAR"
+    ].join("\r\n");
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([ics], {type:"text/calendar"}));
+    a.download = "Abhishek-Kamini-Wedding.ics";
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  // Checklist (saved on this device)
+  var KEY = "ak-wedding-checklist";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){}
+  var boxes = document.querySelectorAll("#checklist-items input");
+  function update(){
+    var done = 0;
+    boxes.forEach(function(b){ if (b.checked) done++; });
+    document.getElementById("progress-text").textContent = done + " of " + boxes.length + " done";
+    document.getElementById("progress-bar").style.width = (done / boxes.length * 100) + "%";
+  }
+  boxes.forEach(function(b){
+    b.checked = !!saved[b.dataset.key];
+    b.addEventListener("change", function(){
+      saved[b.dataset.key] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(e){}
+      update();
+    });
+  });
+  update();
+
+  // Reveal on scroll + active nav link
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+  var links = {};
+  document.querySelectorAll(".nav a").forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        Object.values(links).forEach(function(l){ l.classList.remove("active"); });
+        if (links[e.target.id]) links[e.target.id].classList.add("active");
+      }
+    });
+  }, {rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll("main section[id]").forEach(function(s){ spy.observe(s); });
+})();
+</script>
+
+</body>
+</html>
