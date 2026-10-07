@@ -485,48 +485,45 @@ footer .closing{
   color:var(--ink-soft);
 }
 
-/* ---------- TIMELINE ---------- */
+/* ---------- SCHEDULE ---------- */
 
-.timeline{
-  list-style:none;
+.days{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+  gap:16px;
+}
+.day{
   margin:0;
-  padding:0 0 0 30px;
-  position:relative;
+  text-align:center;
+  padding:26px 24px 20px;
 }
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:9px; top:10px; bottom:10px;
-  width:2px;
-  background:linear-gradient(var(--gold-soft),var(--maroon));
+.day .date-num{
+  display:block;
+  font-size:56px;
+  font-weight:600;
+  line-height:1;
+  color:var(--maroon);
 }
-.timeline li{
-  position:relative;
-  margin-bottom:12px;
-}
-.timeline li::before{
-  content:"";
-  position:absolute;
-  left:-27px; top:26px;
-  width:12px; height:12px;
-  border-radius:50%;
-  background:var(--cream);
-  border:2px solid var(--gold);
-}
-.timeline li.key::before{
-  background:var(--maroon);
-  border-color:var(--maroon);
-  box-shadow:0 0 0 4px rgba(122,46,33,.15);
-}
-.timeline .card{margin:0}
-.timeline .date-tag{
+.day .date-month{
+  display:block;
+  margin-top:4px;
   font-family:var(--sans);
   font-size:11px;
-  letter-spacing:.2em;
+  letter-spacing:.24em;
   text-transform:uppercase;
   color:var(--gold);
 }
-.timeline h3{margin:2px 0 0}
+.day h3{
+  margin:12px 0 14px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.day .plan{
+  max-width:none;
+  text-align:left;
+}
+.day .plan li{align-items:baseline}
+.day .plan time{min-width:128px}
 
 /* ---------- TABLES ---------- */
 
@@ -902,29 +899,28 @@ footer p{
     <div class="ornament"><i></i></div>
   </div>
 
-  <ol class="timeline">
-    <li>
-      <div class="card">
-        <span class="date-tag">12 – 13 December</span>
-        <h3>Guest Arrivals</h3>
-        <span class="small">Check in, settle down and soak in Jalore.</span>
-      </div>
-    </li>
-    <li class="key">
-      <div class="card">
-        <span class="date-tag">14 December</span>
-        <h3>The Wedding</h3>
-        <span class="small">The main celebration.</span>
-      </div>
-    </li>
-    <li>
-      <div class="card">
-        <span class="date-tag">15 December</span>
-        <h3>Final Functions &amp; Departures</h3>
-        <span class="small">Last rituals, farewells and journeys home.</span>
-      </div>
-    </li>
-  </ol>
+  <div class="days">
+    <div class="card day">
+      <span class="date-num">14</span>
+      <span class="date-month">December · Monday</span>
+      <h3>Pre-Wedding Celebrations</h3>
+      <ul class="plan">
+        <li><time>10 AM onwards</time> Haldi</li>
+        <li><time>1 PM onwards</time> Mayra</li>
+        <li><time>7 PM onwards</time> Sangeet</li>
+      </ul>
+    </div>
+
+    <div class="card day">
+      <span class="date-num">15</span>
+      <span class="date-month">December · Tuesday</span>
+      <h3>Wedding &amp; Reception</h3>
+      <ul class="plan">
+        <li><time>10 AM</time> Wedding</li>
+        <li><time>1 PM</time> Reception</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- ============ VENUE ============ -->
@@ -971,7 +967,7 @@ footer p{
     <div class="card">
       <div class="label">By Rail</div>
       <h3>Jalore Station (JOR)</h3>
-      Direct from Mumbai on Train 12489<br>
+      Direct from Mumbai on Train 12490<br>
       <span class="small">Delhi &amp; other cities: direct / connecting services</span>
     </div>
   </div>
@@ -985,7 +981,7 @@ footer p{
       </tr>
       <tr>
         <td>Mumbai</td>
-        <td><strong>12489</strong><br><span class="small">Bikaner–Dadar SF Express</span></td>
+        <td><strong>12490</strong><br><span class="small">Dadar–Bikaner SF Express</span></td>
         <td>Jalore (JOR)</td>
       </tr>
       <tr>
@@ -998,6 +994,7 @@ footer p{
 
   <h3 style="margin:30px 0 4px; text-align:center; font-weight:600">By Road / Bus</h3>
   <div class="grid-2">
+    <div class="card"><div class="route"><strong>Jodhpur → Jalore</strong><span class="badge">~2–2.5 hrs</span></div></div>
     <div class="card"><div class="route"><strong>Ahmedabad → Jalore</strong><span class="badge">~7–9 hrs</span></div></div>
     <div class="card"><div class="route"><strong>Jaipur → Jalore</strong><span class="badge">~8 hrs</span></div></div>
     <div class="card"><div class="route"><strong>Delhi NCR → Jalore</strong><span class="badge">~13–14 hrs</span></div></div>
@@ -1021,9 +1018,8 @@ footer p{
 
   <div class="card" style="margin-top:18px">
     <div class="label">Local Transfers</div>
-    Airport pickup: <strong>Jodhpur → Jalore</strong><br>
-    Railway pickup: <strong>Jalore Station → Venue</strong><br>
-    Group transport: <strong>Tempo Traveller / Mini Bus / SUV</strong>
+    Railway station pickup: <strong>Jalore Railway Station → Venue</strong><br>
+    Bus stand pickup: <strong>Jalore Bus Stand → Venue</strong>
   </div>
 </section>
 
