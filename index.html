@@ -151,10 +151,14 @@ a{color:inherit}
   color:var(--ink);
 }
 .names .n1,
-.names .n2{display:block}
+.names .n2,
+.names .amp{display:block}
 .names .hon{margin-right:.32em}
-.names .n1{transform:translateX(-3cqw)}
-.names .n2{transform:translateX(5cqw)}
+.names .amp{
+  font-size:.6em;
+  line-height:1.1;
+  color:var(--gold);
+}
 
 .portrait{
   position:relative;
@@ -806,8 +810,6 @@ footer p{
 
 @media (max-width:600px){
   body{font-size:18px}
-  .names .n1{transform:translateX(1cqw)}
-  .names .n2{transform:translateX(6cqw)}
   .invite .art-arch{left:-6cqw}
   .invite .art-right{right:-7cqw}
   .base-line{left:2cqw; right:6cqw}
@@ -846,7 +848,8 @@ footer p{
       <p class="when">14<sup>th</sup> &amp; 15<sup>th</sup> Dec, 2026</p>
       <p class="where">Jalore, Rajasthan</p>
       <p class="names" aria-label="Abhishek and Dr. Kaamini">
-        <span class="n1">Abhishek &amp;</span>
+        <span class="n1">Abhishek</span>
+        <span class="amp">&amp;</span>
         <span class="n2"><span class="hon">Dr.</span>Kaamini</span>
       </p>
       <div class="portrait">
