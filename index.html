@@ -454,6 +454,40 @@ footer .closing{
   color:var(--ink);
 }
 
+/* ---------- VENUE ---------- */
+
+.venue-card{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:150px 24px 30px;
+  color:#fff8ef;
+  border-color:rgba(220,196,142,.6);
+  background:
+    linear-gradient(180deg, rgba(40,18,12,0) 0%, rgba(40,18,12,.5) 40%, rgba(40,18,12,.86) 100%),
+    url("assets/venue-vatan-resorts.webp") center 30% / cover no-repeat;
+  box-shadow:0 24px 50px -28px rgba(60,20,10,.75);
+}
+.venue-card .label{color:var(--gold-soft)}
+.venue-card h3{
+  color:#fff;
+  font-size:30px;
+  text-shadow:0 2px 12px rgba(0,0,0,.45);
+}
+.venue-card .small{
+  color:rgba(255,244,230,.92);
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.venue-card .button-row{justify-content:center}
+.venue-card .button.ghost{
+  color:#fff8ef;
+  border-color:rgba(255,240,215,.75);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.venue-card .button.ghost:hover{background:rgba(255,255,255,.18)}
+
 /* ---------- COUNTDOWN ---------- */
 
 .countdown{
@@ -822,6 +856,8 @@ footer p{
   td{font-size:16px}
   th{font-size:10px; letter-spacing:.12em}
   .card{padding:18px}
+  .venue-card{padding:130px 16px 24px}
+  .venue-card h3{font-size:26px}
   .welcome{padding:26px 20px 22px}
   .welcome p{font-size:18px}
   .welcome .salutation{font-size:21px}
@@ -965,12 +1001,12 @@ footer p{
     <div class="ornament"><i></i></div>
   </div>
 
-  <div class="card" style="text-align:center">
+  <div class="card venue-card">
     <div class="label">The Venue</div>
     <h3>Vatan Resorts, Jalore</h3>
     <span class="small">Opp. Ichhapuran Hanuman Temple, NH-325, Jalore Road,<br>Bishangarh, Jalore, Rajasthan 343042</span>
 
-    <div class="button-row" style="justify-content:center">
+    <div class="button-row">
       <a class="button" href="https://www.google.com/maps?cid=15629009693419473000&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSnqNcy&amp;hl=en&amp;gl=IN&amp;source=embed" target="_blank" rel="noopener">
         Open Wedding Location
       </a>
