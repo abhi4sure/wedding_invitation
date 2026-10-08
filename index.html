@@ -460,15 +460,18 @@ footer .closing{
   position:relative;
   overflow:hidden;
   text-align:center;
-  padding:150px 24px 30px;
+  padding:clamp(230px,46vw,340px) 24px 28px;
   color:#fff8ef;
   border-color:rgba(220,196,142,.6);
   background:
-    linear-gradient(180deg, rgba(40,18,12,0) 0%, rgba(40,18,12,.5) 40%, rgba(40,18,12,.86) 100%),
-    url("assets/venue-vatan-resorts.webp") center 30% / cover no-repeat;
+    linear-gradient(180deg, rgba(40,18,12,0) 0%, rgba(40,18,12,0) 50%, rgba(40,18,12,.55) 72%, rgba(40,18,12,.8) 100%),
+    url("assets/venue-vatan-resorts.webp") center top / cover no-repeat;
   box-shadow:0 24px 50px -28px rgba(60,20,10,.75);
 }
-.venue-card .label{color:var(--gold-soft)}
+.venue-card .label{
+  color:#f3dc9a;
+  text-shadow:0 1px 6px rgba(0,0,0,.7);
+}
 .venue-card h3{
   color:#fff;
   font-size:30px;
@@ -856,7 +859,7 @@ footer p{
   td{font-size:16px}
   th{font-size:10px; letter-spacing:.12em}
   .card{padding:18px}
-  .venue-card{padding:130px 16px 24px}
+  .venue-card{padding:clamp(200px,58vw,300px) 16px 24px}
   .venue-card h3{font-size:26px}
   .welcome{padding:26px 20px 22px}
   .welcome p{font-size:18px}
