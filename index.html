@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr. Abhishek &amp; Dr. Kaamini | Wedding Planner · Jalore, Dec 2026</title>
-<meta name="description" content="Save the date — Mr. Abhishek &amp; Dr. Kaamini, 14th &amp; 15th December 2026, Jalore, Rajasthan. Schedule, venue and travel guide for guests.">
+<title>Abhishek &amp; Dr. Kaamini | Wedding Planner · Jalore, Dec 2026</title>
+<meta name="description" content="Save the date — Abhishek &amp; Dr. Kaamini, 14th &amp; 15th December 2026, Jalore, Rajasthan. Schedule, venue and travel guide for guests.">
 <meta name="theme-color" content="#f8dccb">
-<meta property="og:title" content="Mr. Abhishek &amp; Dr. Kaamini — Save the Date">
+<meta property="og:title" content="Abhishek &amp; Dr. Kaamini — Save the Date">
 <meta property="og:description" content="14th &amp; 15th December 2026 · Jalore, Rajasthan">
 <link rel="icon" href="assets/monogram.webp">
 
@@ -724,9 +724,36 @@ footer{
   text-align:center;
   padding:40px 20px 26px;
 }
-footer img{
-  width:70px;
-  margin:0 auto 6px;
+.farewell{margin-bottom:26px}
+.farewell .kicker{
+  display:block;
+  font-family:var(--script);
+  font-size:48px;
+  line-height:1.1;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.couple-art{
+  position:relative;
+  width:min(300px,78vw);
+  margin:0 auto;
+}
+.couple-art img{
+  width:100%;
+  position:relative;
+  z-index:1;
+}
+.couple-art::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:min(460px,88vw);
+  transform:translateX(-50%);
+  bottom:-2px;
+  height:4px;
+  border-radius:2px;
+  background:var(--maroon);
+  z-index:2;
 }
 footer .script{
   font-family:var(--script);
@@ -818,12 +845,12 @@ footer p{
       <h1 class="save-date">Save the Date</h1>
       <p class="when">14<sup>th</sup> &amp; 15<sup>th</sup> Dec, 2026</p>
       <p class="where">Jalore, Rajasthan</p>
-      <p class="names" aria-label="Mr. Abhishek and Dr. Kaamini">
-        <span class="n1"><span class="hon">Mr.</span>Abhishek &amp;</span>
+      <p class="names" aria-label="Abhishek and Dr. Kaamini">
+        <span class="n1">Abhishek &amp;</span>
         <span class="n2"><span class="hon">Dr.</span>Kaamini</span>
       </p>
       <div class="portrait">
-        <img src="Couple.jpeg" alt="Mr. Abhishek and Dr. Kaamini">
+        <img src="Couple.jpeg" alt="Abhishek and Dr. Kaamini">
       </div>
     </div>
 
@@ -873,7 +900,7 @@ footer p{
 
     <p class="sign">
       With love and warm regards,
-      <span>Mr. Abhishek &amp; Dr. Kaamini</span>
+      <span>Abhishek &amp; Dr. Kaamini</span>
     </p>
   </div>
 </section>
@@ -945,7 +972,7 @@ footer p{
         Open Wedding Location
       </a>
       <a class="button ghost" id="gcal" target="_blank" rel="noopener"
-         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Mr.%20Abhishek%20%26%20Dr.%20Kaamini%20%E2%80%94%20Wedding&amp;dates=20261214/20261216&amp;location=Vatan%20Resorts%2C%20NH-325%2C%20Jalore%20Road%2C%20Bishangarh%2C%20Jalore%2C%20Rajasthan%20343042&amp;details=Wedding%20celebrations%20of%20Mr.%20Abhishek%20%26%20Dr.%20Kaamini%2C%2014th%20%26%2015th%20December%202026.%20Venue%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fcid%3D15629009693419473000%26g_mp%3DCiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSnqNcy%26hl%3Den%26gl%3DIN%26source%3Dembed">
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Abhishek%20%26%20Dr.%20Kaamini%20%E2%80%94%20Wedding&amp;dates=20261214/20261216&amp;location=Vatan%20Resorts%2C%20NH-325%2C%20Jalore%20Road%2C%20Bishangarh%2C%20Jalore%2C%20Rajasthan%20343042&amp;details=Wedding%20celebrations%20of%20Abhishek%20%26%20Dr.%20Kaamini%2C%2014th%20%26%2015th%20December%202026.%20Venue%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fcid%3D15629009693419473000%26g_mp%3DCiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSnqNcy%26hl%3Den%26gl%3DIN%26source%3Dembed">
         Add to Google Calendar
       </a>
       <button class="button ghost" id="ics" type="button">Apple / Outlook (.ics)</button>
@@ -1082,9 +1109,14 @@ footer p{
 </main>
 
 <footer>
+  <div class="farewell reveal">
+    <span class="kicker">See you in Jalore!</span>
+    <div class="couple-art">
+      <img src="assets/couple-illustration.webp" alt="Illustration of Abhishek and Kaamini">
+    </div>
+  </div>
   <p class="closing">Your presence is the most precious gift — we can't wait to celebrate with you!</p>
-  <img src="assets/monogram.webp" alt="">
-  <div class="script">Mr. Abhishek &amp; Dr. Kaamini</div>
+  <div class="script">Abhishek &amp; Dr. Kaamini</div>
   <p>14 &amp; 15 December 2026 · Jalore, Rajasthan</p>
   <p style="margin-top:14px">Invitation to follow</p>
 </footer>
@@ -1123,7 +1155,7 @@ footer p{
       "DTSTAMP:20261001T000000Z",
       "DTSTART;VALUE=DATE:20261214",
       "DTEND;VALUE=DATE:20261216",
-      "SUMMARY:Mr. Abhishek & Dr. Kaamini — Wedding",
+      "SUMMARY:Abhishek & Dr. Kaamini — Wedding",
       "LOCATION:Vatan Resorts\\, NH-325\\, Jalore Road\\, Bishangarh\\, Jalore\\, Rajasthan 343042",
       "DESCRIPTION:Venue: https://www.google.com/maps?cid=15629009693419473000&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSnqNcy&hl=en&gl=IN&source=embed",
       "END:VEVENT","END:VCALENDAR"
