@@ -187,38 +187,25 @@ a{color:inherit}
 
 .portrait{
   position:relative;
-  width:clamp(160px,38cqw,270px);
-  aspect-ratio:5/6;
-  margin:0 auto;
-  border-radius:999px 999px 0 0;
-  overflow:hidden;
-  box-shadow:0 18px 40px -22px rgba(122,46,33,.55);
+  z-index:2;
+  width:clamp(210px,50cqw,360px);
+  margin:1.6cqw auto 0;
 }
-.portrait img{
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:50% 30%;
-}
+.portrait img{display:block; width:100%; height:auto}
 .portrait::after{
   content:"";
   position:absolute;
-  inset:8px 8px 0;
-  border:1px solid rgba(255,240,210,.85);
-  border-bottom:0;
-  border-radius:999px 999px 0 0;
-  pointer-events:none;
+  z-index:2;
+  left:50%;
+  bottom:0;
+  width:124%;
+  height:4px;
+  transform:translateX(-50%);
+  border-radius:2px;
+  background:var(--maroon);
 }
 
-.base-line{
-  position:absolute;
-  z-index:2;
-  left:7.6cqw;
-  right:10cqw;
-  bottom:var(--base);
-  height:4px;
-  background:var(--maroon);
-  border-radius:2px;
-}
+.base-line{display:none}
 
 .follow{
   position:absolute;
@@ -323,6 +310,11 @@ section{
   font-size:46px;
   line-height:1;
   color:var(--gold);
+}
+.heading .kicker.dev{
+  font-family:"Tiro Devanagari Hindi", var(--serif);
+  font-size:40px;
+  line-height:1.4;
 }
 .heading h2{
   margin:4px 0 0;
@@ -594,6 +586,113 @@ footer .closing{
 .day .plan li{align-items:baseline}
 .day .plan time{min-width:128px}
 
+.day-head{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:8px 0 14px;
+}
+.day-head + .day-head,
+.fn-grid + .day-head{margin-top:34px}
+.day-head .date-num{
+  font-size:52px;
+  font-weight:600;
+  line-height:1;
+  color:var(--maroon);
+}
+.day-meta{text-align:left}
+.day-meta .date-month{
+  display:block;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.day-meta .day-title{
+  display:block;
+  margin-top:2px;
+  font-size:22px;
+  font-weight:600;
+  color:var(--ink);
+}
+.fn-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+@media (max-width:760px){
+  .fn-grid{grid-template-columns:1fr 1fr}
+}
+.fn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin:0;
+  padding:20px 16px 16px;
+  border:1.5px solid var(--gold);
+  border-radius:18px;
+  background:linear-gradient(180deg,#fffaf3 0%, #f7efe4 100%);
+  box-shadow:0 16px 36px -28px rgba(122,46,33,.6);
+}
+.fn.meal{
+  justify-content:center;
+  background:linear-gradient(135deg,rgba(255,248,236,.95),rgba(249,222,206,.72));
+}
+.fn h3{
+  margin:0;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:26px;
+  line-height:1.05;
+  color:var(--maroon);
+}
+.fn-time{
+  margin:7px 0 0;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.fn img{
+  width:auto;
+  max-width:78%;
+  height:108px;
+  margin:14px auto 0;
+  object-fit:contain;
+}
+.fn-sub{
+  margin:8px 0 0;
+  font-size:17px;
+  line-height:1.35;
+}
+.fn-tag{
+  margin:10px 0 0;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:18px;
+  color:var(--ink-soft);
+}
+.fn-note{
+  margin:8px 0 0;
+  max-width:26ch;
+  font-size:14.5px;
+  line-height:1.4;
+  color:var(--ink-soft);
+}
+.fn-note span{
+  font-family:"Tiro Devanagari Hindi", var(--serif);
+  color:var(--maroon);
+}
+
+#travel .card{
+  border:1.5px solid var(--gold);
+  background:linear-gradient(135deg,rgba(255,248,236,.9),rgba(249,222,206,.7));
+}
+
 /* ---------- TABLES ---------- */
 
 .table-wrap{
@@ -836,6 +935,68 @@ footer p{
   color:var(--ink-soft);
 }
 
+/* ---------- AMBIENCE ---------- */
+
+.ambience{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+  pointer-events:none;
+}
+.ambience::before,
+.ambience::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(241,217,147,.34), transparent 68%);
+  animation:wash 26s ease-in-out infinite alternate;
+}
+.ambience::before{
+  width:min(52vw,620px);
+  height:min(52vw,620px);
+  left:-12vw;
+  top:6vh;
+}
+.ambience::after{
+  width:min(40vw,480px);
+  height:min(40vw,480px);
+  right:-10vw;
+  bottom:4vh;
+  animation-duration:34s;
+  animation-direction:alternate-reverse;
+  background:radial-gradient(circle, rgba(249,206,186,.4), transparent 70%);
+}
+.ambience span{
+  position:absolute;
+  top:-10vh;
+  left:var(--x);
+  width:var(--s);
+  height:calc(var(--s) * 1.45);
+  border-radius:78% 22% 68% 32%;
+  background:radial-gradient(circle at 32% 28%, #f8ead0, var(--c) 74%);
+  opacity:.4;
+  animation:drift var(--dur) linear infinite;
+  animation-delay:var(--delay);
+}
+.ambience span:nth-child(1){--x:8%;  --s:9px;  --c:#e4b56a; --dx:28px;  --turn:200deg; --dur:28s; --delay:-4s}
+.ambience span:nth-child(2){--x:22%; --s:13px; --c:#e7a48a; --dx:-36px; --turn:-240deg; --dur:34s; --delay:-18s}
+.ambience span:nth-child(3){--x:37%; --s:8px;  --c:#dcc48e; --dx:18px;  --turn:160deg; --dur:24s; --delay:-9s}
+.ambience span:nth-child(4){--x:51%; --s:11px; --c:#c98474; --dx:-22px; --turn:-190deg; --dur:31s; --delay:-22s}
+.ambience span:nth-child(5){--x:64%; --s:14px; --c:#e8c98a; --dx:32px;  --turn:260deg; --dur:36s; --delay:-12s}
+.ambience span:nth-child(6){--x:76%; --s:8px;  --c:#e7b09a; --dx:-16px; --turn:-150deg; --dur:26s; --delay:-2s}
+.ambience span:nth-child(7){--x:88%; --s:12px; --c:#d7b56a; --dx:24px;  --turn:210deg; --dur:33s; --delay:-27s}
+.ambience span:nth-child(8){--x:15%; --s:10px; --c:#c97868; --dx:-28px; --turn:-280deg; --dur:29s; --delay:-15s}
+
+@keyframes drift{
+  from{transform:translate3d(0,-12vh,0) rotate(0deg)}
+  to{transform:translate3d(var(--dx),118vh,0) rotate(var(--turn))}
+}
+@keyframes wash{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(18vw,-6vh,0)}
+}
+
 /* ---------- MOTION ---------- */
 
 .reveal{
@@ -866,6 +1027,7 @@ footer p{
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none !important; transition:none !important}
   .reveal{opacity:1; transform:none}
+  .ambience{display:none}
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -874,11 +1036,18 @@ footer p{
   body{font-size:18px}
   .invite .art-arch{left:-6cqw}
   .invite .art-right{right:-7cqw}
-  .base-line{left:2cqw; right:6cqw}
+  .portrait{width:min(240px,66cqw)}
   .countdown{gap:8px}
   .countdown strong{font-size:30px}
   .countdown span{font-size:9px; letter-spacing:.12em}
   .heading .kicker{font-size:40px}
+  .heading .kicker.dev{font-size:30px}
+  .fn-grid{grid-template-columns:1fr 1fr; gap:10px}
+  .fn{padding:16px 12px 14px}
+  .fn h3{font-size:22px}
+  .fn img{height:88px}
+  .day-head .date-num{font-size:42px}
+  .day-meta .day-title{font-size:18px}
   .heading h2{font-size:20px}
   th,td{padding:11px 12px}
   td{font-size:16px}
@@ -898,6 +1067,11 @@ footer p{
 </head>
 
 <body>
+
+<div class="ambience" aria-hidden="true">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
 
 <div class="gold-band"></div>
 
@@ -924,7 +1098,7 @@ footer p{
         <span class="n2"><span class="hon">Dr.</span>Kaamini</span>
       </p>
       <div class="portrait">
-        <img src="Couple.jpeg" alt="Abhishek and Dr. Kaamini">
+        <img src="assets/couple-illustration.webp" alt="Illustration of Abhishek and Dr. Kaamini">
       </div>
     </div>
 
@@ -950,7 +1124,7 @@ footer p{
 <!-- ============ WELCOME ============ -->
 <section id="welcome" class="reveal">
   <div class="heading">
-    <span class="kicker">Padharo Mhare Des</span>
+    <span class="kicker dev" lang="hi">🙏🏻पधारो म्हारे देस🙏🏻</span>
     <h2>A Warm Welcome</h2>
     <div class="ornament"><i></i></div>
   </div>
@@ -974,7 +1148,7 @@ footer p{
 
     <p class="sign">
       With love and warm regards,
-      <span>Abhishek &amp; Dr. Kaamini</span>
+      <span>Abhishek &amp;  Dr.Kaamini</span>
     </p>
   </div>
 </section>
@@ -1004,27 +1178,79 @@ footer p{
     <div class="ornament"><i></i></div>
   </div>
 
-  <div class="days">
-    <div class="card day">
-      <span class="date-num">14</span>
+  <div class="day-head">
+    <span class="date-num">14</span>
+    <span class="day-meta">
       <span class="date-month">December · Monday</span>
-      <h3>Pre-Wedding Celebrations</h3>
-      <ul class="plan">
-        <li><time>10 AM onwards</time> Haldi</li>
-        <li><time>1 PM onwards</time> Mayra</li>
-        <li><time>7 PM onwards</time> Sangeet</li>
-      </ul>
-    </div>
+      <span class="day-title">Pre-Wedding Celebrations</span>
+    </span>
+  </div>
+  <div class="fn-grid">
+    <article class="fn meal">
+      <h3>Breakfast</h3>
+      <p class="fn-time">8 AM onwards</p>
+    </article>
+    <article class="fn">
+      <h3>Sunehra Rang</h3>
+      <p class="fn-time">10 AM onwards</p>
+      <img src="assets/fn-haldi.webp" alt="">
+      <p class="fn-tag">Haldi</p>
+    </article>
+    <article class="fn meal">
+      <h3>Lunch</h3>
+      <p class="fn-time">12 PM onwards</p>
+    </article>
+    <article class="fn">
+      <h3>Rishton Ki Mithas</h3>
+      <p class="fn-time">3 PM onwards</p>
+      <img src="assets/fn-maamera.webp" alt="">
+      <p class="fn-tag">Maamera</p>
+    </article>
+    <article class="fn meal">
+      <h3>High Tea</h3>
+      <p class="fn-time">4 PM onwards</p>
+    </article>
+    <article class="fn">
+      <h3>Jashn-e-Shaam</h3>
+      <p class="fn-time">7 PM onwards</p>
+      <img src="assets/fn-sangeet.webp" alt="">
+      <p class="fn-sub">Sangeet &amp; dinner</p>
+      <p class="fn-note"><span lang="hi">चौविहार की व्यवस्था है</span><br>served before sunset</p>
+    </article>
+  </div>
 
-    <div class="card day">
-      <span class="date-num">15</span>
+  <div class="day-head">
+    <span class="date-num">15</span>
+    <span class="day-meta">
       <span class="date-month">December · Tuesday</span>
-      <h3>Wedding &amp; Reception</h3>
-      <ul class="plan">
-        <li><time>10 AM onwards</time> Wedding</li>
-        <li><time>1 PM onwards</time> Reception</li>
-      </ul>
-    </div>
+      <span class="day-title">Wedding &amp; Reception</span>
+    </span>
+  </div>
+  <div class="fn-grid">
+    <article class="fn meal">
+      <h3>Breakfast</h3>
+      <p class="fn-time">8 AM onwards</p>
+    </article>
+    <article class="fn">
+      <h3>Shubh Mangalam</h3>
+      <p class="fn-time">9 AM onwards</p>
+      <img src="assets/fn-wedding.webp" alt="">
+      <p class="fn-sub">Baarat, followed by the wedding</p>
+    </article>
+    <article class="fn meal">
+      <h3>Lunch</h3>
+      <p class="fn-time">12 PM onwards</p>
+    </article>
+    <article class="fn meal">
+      <h3>High Tea</h3>
+      <p class="fn-time">4 PM onwards</p>
+    </article>
+    <article class="fn">
+      <h3>Ronaq</h3>
+      <p class="fn-time">5 PM onwards</p>
+      <img src="assets/fn-reception.webp" alt="">
+      <p class="fn-sub">Reception, followed by dinner</p>
+    </article>
   </div>
 </section>
 
