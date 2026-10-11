@@ -844,78 +844,6 @@ th{
   color:var(--maroon);
 }
 
-/* ---------- CHECKLIST ---------- */
-
-.checklist{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-.checklist label{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  padding:10px 4px;
-  border-bottom:1px solid var(--line);
-  cursor:pointer;
-  user-select:none;
-}
-.checklist li:last-child label{border-bottom:0}
-.checklist input{
-  appearance:none;
-  -webkit-appearance:none;
-  flex:none;
-  width:22px; height:22px;
-  margin:0;
-  border:1.5px solid var(--gold);
-  border-radius:6px;
-  display:grid;
-  place-content:center;
-  background:#fffaf4;
-  cursor:pointer;
-  transition:background .2s;
-}
-.checklist input::before{
-  content:"";
-  width:11px; height:6px;
-  border-left:2px solid #fff;
-  border-bottom:2px solid #fff;
-  transform:rotate(-45deg) translate(1px,-1px) scale(0);
-  transition:transform .15s;
-}
-.checklist input:checked{background:var(--maroon); border-color:var(--maroon)}
-.checklist input:checked::before{transform:rotate(-45deg) translate(1px,-1px) scale(1)}
-.checklist input:checked + span{
-  color:var(--ink-soft);
-  text-decoration:line-through;
-  text-decoration-color:var(--gold);
-}
-.progress{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:8px;
-  font-family:var(--sans);
-  font-size:11px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--ink-soft);
-}
-.progress .bar{
-  flex:1;
-  height:4px;
-  border-radius:4px;
-  background:rgba(179,138,60,.2);
-  overflow:hidden;
-}
-.progress .bar i{
-  display:block;
-  height:100%;
-  width:0;
-  background:var(--gold-band);
-  transition:width .35s ease;
-}
-
 /* ---------- FOOTER ---------- */
 
 footer{
@@ -1162,7 +1090,6 @@ footer p{
     <li><a href="#venue">Venue</a></li>
     <li><a href="#travel">Travel</a></li>
     <li><a href="#return">Return</a></li>
-    <li><a href="#checklist">Checklist</a></li>
   </ul>
 </nav>
 
@@ -1437,26 +1364,6 @@ footer p{
   <p class="small" style="text-align:center">Please re-check the final railway timetable before booking.</p>
 </section>
 
-<!-- ============ CHECKLIST ============ -->
-<section id="checklist" class="reveal">
-  <div class="heading">
-    <span class="kicker">Before you go</span>
-    <h2>Quick Checklist</h2>
-    <div class="ornament"><i></i></div>
-  </div>
-
-  <div class="card">
-    <div class="progress"><span id="progress-text">0 of 5 done</span><div class="bar"><i id="progress-bar"></i></div></div>
-    <ul class="checklist" id="checklist-items">
-      <li><label><input type="checkbox" data-key="book"><span>Book travel early</span></label></li>
-      <li><label><input type="checkbox" data-key="arrive"><span>Plan arrival by 13 Dec</span></label></li>
-      <li><label><input type="checkbox" data-key="location"><span>Save the wedding location</span></label></li>
-      <li><label><input type="checkbox" data-key="return"><span>Keep return tickets ready</span></label></li>
-      <li><label><input type="checkbox" data-key="mumbai"><span>Mumbai guests: plan for Train 12489 on 15 Dec</span></label></li>
-    </ul>
-  </div>
-</section>
-
 </main>
 
 <footer>
@@ -1516,27 +1423,6 @@ footer p{
     a.download = "Abhishek-weds-Dr-Kaamini-Wedding.ics";
     document.body.appendChild(a); a.click(); a.remove();
   });
-
-  // Checklist (saved on this device)
-  var KEY = "ak-wedding-checklist";
-  var saved = {};
-  try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){}
-  var boxes = document.querySelectorAll("#checklist-items input");
-  function update(){
-    var done = 0;
-    boxes.forEach(function(b){ if (b.checked) done++; });
-    document.getElementById("progress-text").textContent = done + " of " + boxes.length + " done";
-    document.getElementById("progress-bar").style.width = (done / boxes.length * 100) + "%";
-  }
-  boxes.forEach(function(b){
-    b.checked = !!saved[b.dataset.key];
-    b.addEventListener("change", function(){
-      saved[b.dataset.key] = b.checked;
-      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(e){}
-      update();
-    });
-  });
-  update();
 
   // Reveal on scroll + active nav link
   var io = new IntersectionObserver(function(entries){
