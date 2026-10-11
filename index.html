@@ -288,6 +288,33 @@ a{color:inherit}
   border-bottom-color:var(--gold);
 }
 
+.music-toggle{
+  position:fixed;
+  z-index:30;
+  right:16px;
+  bottom:16px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:11px 16px;
+  border-radius:999px;
+  border:1px solid var(--gold);
+  background:rgba(255,248,236,.94);
+  color:var(--maroon);
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 14px 30px -16px rgba(122,46,33,.75);
+}
+.music-toggle[aria-pressed="false"]{animation:music-hint 2.8s ease-in-out infinite}
+.music-toggle .mark{font-size:15px; line-height:1}
+@keyframes music-hint{
+  0%,100%{box-shadow:0 14px 30px -16px rgba(122,46,33,.75)}
+  50%{box-shadow:0 0 0 6px rgba(179,138,60,.18)}
+}
+
 /* ---------- LAYOUT ---------- */
 
 .container{
@@ -1073,6 +1100,12 @@ footer p{
   <span></span><span></span><span></span><span></span>
 </div>
 
+<button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">
+  <span class="mark" aria-hidden="true">♪</span>
+  <span class="music-label">Play music</span>
+</button>
+<audio id="shaadi-music" loop preload="none" src="assets/shaadi-instrumental.mp3"></audio>
+
 <div class="gold-band"></div>
 
 <!-- ============ SAVE THE DATE ============ -->
@@ -1504,6 +1537,31 @@ footer p{
     });
   }, {rootMargin:"-45% 0px -50% 0px"});
   document.querySelectorAll("main section[id]").forEach(function(s){ spy.observe(s); });
+
+  // Soft shaadi instrumental. Browsers only allow sound after a tap.
+  // "Indian Wedding" by India_Happy — Pixabay Content License.
+  var music = document.getElementById("shaadi-music");
+  var musicBtn = document.getElementById("music-toggle");
+  var musicLabel = musicBtn.querySelector(".music-label");
+  var musicOn = false;
+  var guestPaused = false;
+  music.volume = 0.32;
+  function showMusic(on){
+    musicOn = on;
+    musicBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    musicLabel.textContent = on ? "Pause music" : "Play music";
+  }
+  function startMusic(){
+    music.play().then(function(){ showMusic(true); }).catch(function(){ showMusic(false); });
+  }
+  musicBtn.addEventListener("click", function(){
+    if (music.paused){ guestPaused = false; startMusic(); }
+    else { guestPaused = true; music.pause(); showMusic(false); }
+  });
+  document.addEventListener("pointerdown", function(e){
+    if (guestPaused || musicOn || musicBtn.contains(e.target)) return;
+    startMusic();
+  });
 })();
 </script>
 
