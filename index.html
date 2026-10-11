@@ -136,14 +136,14 @@ a{color:inherit}
 
 .monogram{
   width:clamp(54px,11cqw,80px);
-  margin:0 auto 3cqw;
+  margin:0 auto max(22px, 4.2cqw);
 }
 
 .save-date{
   font-family:var(--script);
   font-weight:400;
   font-size:clamp(36px,8.6cqw,60px);
-  line-height:1;
+  line-height:1.15;
   margin:0 0 2.5cqw;
   color:var(--ink);
 }
@@ -697,11 +697,17 @@ footer .closing{
   line-height:1.35;
 }
 .fn-tag{
-  margin:10px 0 0;
+  margin:12px 0 0;
   font-family:var(--serif);
-  font-style:italic;
-  font-size:18px;
-  color:var(--ink-soft);
+  font-style:normal;
+  font-weight:600;
+  font-size:20px;
+  line-height:1.2;
+  color:var(--maroon);
+}
+.fn-sub .fn-tag{
+  margin:0;
+  font-size:1.08em;
 }
 .fn-note{
   margin:8px 0 0;
@@ -1059,10 +1065,18 @@ footer p{
 
 /* ---------- RESPONSIVE ---------- */
 
+@media (max-width:760px){
+  .invite .art-arch{left:-10cqw}
+  .invite .art-right{right:-8cqw; width:30cqw; top:14cqw}
+  .monogram{margin-bottom:max(26px, 5cqw)}
+}
+
 @media (max-width:600px){
   body{font-size:18px}
-  .invite .art-arch{left:-6cqw}
-  .invite .art-right{right:-7cqw}
+  .invite-content{padding-top:max(84px, 26cqw)}
+  .invite .art-arch{left:-14cqw; width:44cqw}
+  .invite .art-right{right:-13cqw; width:32cqw; top:14cqw}
+  .save-date{font-size:clamp(32px, 11cqw, 48px)}
   .portrait{width:min(240px,66cqw)}
   .countdown{gap:8px}
   .countdown strong{font-size:30px}
@@ -1250,7 +1264,7 @@ footer p{
       <h3>Jashn-e-Shaam</h3>
       <p class="fn-time">7 PM onwards</p>
       <img src="assets/fn-sangeet.webp" alt="">
-      <p class="fn-sub">Sangeet &amp; dinner</p>
+      <p class="fn-sub"><span class="fn-tag">Sangeet</span> &amp; dinner</p>
       <p class="fn-note"><span lang="hi">चौविहार की व्यवस्था है</span><br>served before sunset</p>
     </article>
   </div>
@@ -1272,7 +1286,7 @@ footer p{
       <h3>Shubh Mangalam</h3>
       <p class="fn-time">9 AM onwards</p>
       <img src="assets/fn-wedding.webp" alt="">
-      <p class="fn-sub">Baarat, followed by the wedding</p>
+      <p class="fn-sub"><span class="fn-tag">Baarat</span>, followed by the <span class="fn-tag">wedding</span></p>
     </article>
     <article class="fn meal">
       <h3>Dawat-e-Khaas</h3>
@@ -1288,7 +1302,7 @@ footer p{
       <h3>Ronaq</h3>
       <p class="fn-time">5 PM onwards</p>
       <img src="assets/fn-reception.webp" alt="">
-      <p class="fn-sub">Reception, followed by dinner</p>
+      <p class="fn-sub"><span class="fn-tag">Reception</span>, followed by dinner</p>
     </article>
   </div>
 </section>
@@ -1337,7 +1351,7 @@ footer p{
     <div class="card">
       <div class="label">By Rail</div>
       <h3>Jalore Station (JOR)</h3>
-      Direct from Mumbai on Train 12490<br>
+      Direct from Mumbai/Surat/Ahemdabad on Train 12490<br>
       <span class="small">Delhi &amp; other cities: direct / connecting services</span>
     </div>
   </div>
