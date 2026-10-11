@@ -1118,7 +1118,7 @@ footer p{
   <span class="mark" aria-hidden="true">♪</span>
   <span class="music-label">Play music</span>
 </button>
-<audio id="shaadi-music" loop preload="none" src="assets/shaadi-instrumental.mp3"></audio>
+<audio id="shaadi-music" loop autoplay preload="auto" src="assets/shaadi-instrumental.mp3"></audio>
 
 <div class="gold-band"></div>
 
@@ -1556,8 +1556,9 @@ footer p{
   }, {rootMargin:"-45% 0px -50% 0px"});
   document.querySelectorAll("main section[id]").forEach(function(s){ spy.observe(s); });
 
-  // Soft shaadi instrumental. Browsers only allow sound after a tap.
-  // "Indian Wedding" by India_Happy — Pixabay Content License.
+  // Soft shaadi instrumental. Play as the page opens; a blocked
+  // autoplay still starts on the first tap. "Indian Wedding" by
+  // India_Happy — Pixabay Content License.
   var music = document.getElementById("shaadi-music");
   var musicBtn = document.getElementById("music-toggle");
   var musicLabel = musicBtn.querySelector(".music-label");
@@ -1570,8 +1571,10 @@ footer p{
     musicLabel.textContent = on ? "Pause music" : "Play music";
   }
   function startMusic(){
-    music.play().then(function(){ showMusic(true); }).catch(function(){ showMusic(false); });
+    var pending = music.play();
+    if (pending) pending.then(function(){ showMusic(true); }).catch(function(){ showMusic(false); });
   }
+  music.addEventListener("playing", function(){ showMusic(true); });
   musicBtn.addEventListener("click", function(){
     if (music.paused){ guestPaused = false; startMusic(); }
     else { guestPaused = true; music.pause(); showMusic(false); }
@@ -1580,6 +1583,7 @@ footer p{
     if (guestPaused || musicOn || musicBtn.contains(e.target)) return;
     startMusic();
   });
+  startMusic();
 })();
 </script>
 
